@@ -1,0 +1,74 @@
+/* Laptop screen */
+@media only screen and (max-width: 1200px) {
+  .hero-left h1 {
+    font-size: 4rem;
+    line-height: 50px;
+  }
+  .hero {
+    padding: 5.8rem 1.7rem 5.8rem 7.6rem;
+  }
+}
+/*Tablet, Small Laptop screen */
+
+@media only screen and (max-width: 992px) {
+  .main {
+    margin-bottom: 5rem;
+  }
+  .tablet-button {
+    display: block;
+    margin-bottom: 5rem;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .main-left {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    gap: 2rem;
+  }
+  .main-right {
+    grid-template-columns: repeat(2, calc((100% / 2) - 1.6rem));
+  }
+}
+/*Small Tablet screen */
+
+@media only screen and (max-width: 766px) {
+  .hero {
+    padding: 2.8rem 3.8rem 0;
+
+    flex-direction: column;
+  }
+}
+/*Mobile screen */
+@media only screen and (max-width: 576px) {
+  .main-left .action-button {
+    width: 100%;
+  }
+  .hero-left h1 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+  }
+  .hero-left {
+    text-align: center;
+  }
+  .main {
+    margin-bottom: 13rem;
+  }
+  .tablet-button {
+    display: none;
+  }
+  .main-left {
+    flex-direction: column;
+  }
+  .main-left button {
+    margin: auto;
+  }
+  .main-right {
+    grid-template-columns: 1fr;
+  }
+}

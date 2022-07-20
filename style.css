@@ -1,280 +1,287 @@
-/* Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lobster&family=Manrope&family=Poppins:wght@300;400;500;600;700&display=swap");
-
-*,
-*::before,
-*::after {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* GLOBAL CSS */
+* {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
-/* Input PlaceHolder Design */
-::-webkit-input-placeholder {
-  text-align: center;
-}
-
-:-moz-placeholder {
-  text-align: center;
-}
-
-::-moz-placeholder {
-  text-align: center;
-}
-
-:-ms-input-placeholder {
-  text-align: center;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 body {
   font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
+  font-size: 1.6rem;
 }
-input {
-  font: inherit;
-  border: none;
-  outline: none;
-  padding: 8px 12px;
+button {
+  cursor: pointer;
 }
 .container {
-  max-width: 1200px;
+  max-width: 120rem;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+/* Hero Section Styling */
+.hero {
+  display: flex;
+  background-color: #161616;
+  gap: 2.4rem;
+  justify-content: center;
+  border-radius: 3rem;
+  padding: 3.3rem 7.9rem 0 12rem;
+  margin-top: 3rem;
+  overflow: hidden;
+}
+.hero-left {
+  flex-basis: 50%;
+  align-self: center;
+}
+.hero-left h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 8rem;
+}
+.hero-left p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin: 2rem 0 3rem 0;
+}
+.hero-left button {
+  color: #fff;
+  background: #dd0000;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 1.6rem 2.5rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.hero-left button i {
+  margin-left: 1rem;
+}
+.hero-left button:hover {
+  background: #fff;
+  border: 2px solid #dd0000;
+  color: #dd0000;
+  transition: all 0.3s ease-in-out;
+}
+.hero-right {
+  flex-basis: 50%;
+  text-align: center;
+  align-self: flex-end;
+}
+.hero-right img {
+  max-width: 59rem;
+  display: block;
+  width: 100%;
+}
+/* Header Animation */
+.hero-right:hover img {
+  animation: bounceInOut 1s linear infinite;
+}
+
+@keyframes bounceInOut {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Main Section Styling */
+.main {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+}
+
+.main-left {
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31.2rem;
+  height: 31.2rem;
+  border-radius: 10px;
+  padding: 3rem;
+}
+.main-left .action-button {
+  padding: 1.7rem 0;
+  width: 25.2rem;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #161616;
   margin: auto;
 }
-.section-gap {
-  margin-top: 120px;
-  margin-bottom: 120px;
+.main-left .active {
+  background-color: #dd0000;
+  color: #fff;
 }
-/* Button CSS */
-.btn {
-  padding: 16px 12px;
-  background: #ff5959;
-  border-radius: 5px;
-  color: #ffffff;
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border: 2px solid #ff5959;
-  transition: all 0.3s ease;
+
+.main-right {
+  display: grid;
+  grid-template-columns: repeat(3, calc((100% / 3) - 1.6rem));
+  grid-gap: 2.4rem;
 }
-.btn:hover {
-  background: transparent;
-  color: #ff5959;
+.main-right .card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
 }
-.section-title {
-  margin-bottom: 50px;
+.main-right .card .card-body {
+  padding: 2rem;
 }
-.section-title h2 {
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 54px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #121212;
-  text-transform: capitalize;
-}
-.section-title p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  text-align: center;
-  color: #707070;
-}
-/* Header CSS */
-.header {
+.main-right .card img {
   width: 100%;
-  height: 69vh;
-  background-image: linear-gradient(
-      360deg,
-      #121212 0%,
-      rgba(18, 18, 18, 0) 100%
-    ),
-    url("./images/donation2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-.header h1 {
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 65px;
-  line-height: 78px;
-  color: #ffffff;
-  text-align: center;
-}
-.header p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  text-align: center;
-  color: #ffffff;
-  margin: 20px 0 30px;
-}
-/* Price Box CSS */
-
-.price-box-container {
-  display: flex;
-  justify-content: space-between;
-}
-.price-box {
-  width: 135px;
-  height: 123px;
-  background: #fafafa;
+.main-right .card .card-body button {
+  background-color: transparent;
+  border: 1px solid #161616;
+  padding: 4px 1.7rem;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.price-box.recommended {
-  background: #ffeeee;
-  border: 2px solid #ff5959;
-}
-
-.price-box h3 {
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  color: #707070;
-}
-.price-box.recommended h3 {
-  color: #ff5959;
-}
-/* Amount Form CSS */
-
-.amount-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.amount-form input {
-  margin: 60px 0 30px;
-  width: 100%;
-  border-bottom: 1px solid #dadada;
-}
-/* Plans Section CSS */
-.plans-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-.plan {
-  background: rgba(79, 157, 166, 0.1);
-  border-radius: 5px;
-  padding: 50px 22px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  flex-basis: 33.33%;
-}
-.plan img {
-  width: 58px;
-  height: 50px;
-}
-.plan h3 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  color: #121212;
-  margin: 30px 0 16px;
-}
-.plan p {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #707070;
+  color: #161616;
 }
-.plan.green {
-  background: rgba(79, 157, 166, 0.1);
-}
-.plan.pink {
-  background: rgba(255, 89, 89, 0.1);
-}
-.plan.yellow {
-  background: rgba(255, 244, 214, 0.3);
-}
-/* What We Do Section CSS */
-.we-do-container {
-  display: flex;
-  gap: 30px;
-}
-.we-do-single img {
-  width: 100%;
-  border-radius: 5px;
-}
-.we-do-single {
-  overflow: hidden;
-  position: relative;
-}
-.we-do-single .content {
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px;
-  width: 100%;
-  color: #ff5959;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-align: center;
-}
-/* Partner Section CSS */
 
-.partner-container {
+.main-right .card .card-body p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #161616;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.main-right .card .card-body .count {
+  display: flex;
+}
+.main-right .card .card-body .count i {
+  color: #161616cc;
+}
+.main-right .card .card-body .count span {
+  margin: 0 3rem 0 1rem;
+}
+/* Fixture Section Styling */
+.card-images {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  padding: 53px 30px 20px 30px;
+  gap: 1rem;
 }
-.partner-container img {
-  width: 20%;
+
+.main-right .card .card-body h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #161616;
 }
-/* Email Section CSS */
-.email-box {
-  background: #fff4d6;
-  padding: 76px 188px;
-  border-radius: 5px;
+.fixture-main .card .card-body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #4d4d4d;
 }
-.email-box form {
+/* Tablet Button styling */
+.tab-btn {
   display: flex;
+  justify-content: center;
 }
-.email-box form input {
-  flex-grow: 1;
-  padding: 12px 16px;
+.tablet-button {
+  display: none;
+  font-weight: 400;
   font-size: 20px;
-  background: #d9d9d9;
-  border-radius: 5px 0px 0px 5px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #dd0000;
+  border-radius: 5px;
+  padding: 1.2rem 1.9rem;
+  border: none;
+  cursor: pointer;
 }
-.email-box form input::placeholder {
-  font-size: 20px;
-}
+
 /* Footer CSS */
 .footer {
-  background: #0b0d17;
-  padding: 40px 0;
+  background-color: #000;
+  padding: 13rem 0 11rem;
+}
+.footer-logo {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.footer-link {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
-.footer h2 {
-  font-family: "Lobster";
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: 0.5px;
-  color: #ff5959;
-  margin-bottom: 24px;
+.footer-link li {
+  flex-basis: 15rem;
+  margin-bottom: 2rem;
 }
-.footer p {
-  font-family: "Manrope";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: #d9dbe1;
+.footer-link a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #b9b9b9;
+  transition: all 0.3s ease-in-out;
+}
+.footer-link a:hover {
+  color: #dd0000;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 3rem;
+}
+.footer-social a {
+  display: block;
+  font-size: 2.4rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.footer-social a:hover {
+  color: #dd0000;
 }
